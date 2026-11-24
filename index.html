@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#000000">
 <title>Contact Rexx Hub — REXVA CBT for schools</title>
-<meta name="description" content="Talk to Rexx Hub about REXVA CBT: offline computer-based exams for schools, an online teacher results dashboard, and a 30-day trial.">
+<meta name="description" content="Rexx Hub: REXVA CBT offline exams for schools, IT support, software and system upgrade and maintenance, and virtual assistance. Request a 30-day trial.">
 <link rel="canonical" href="https://rexxhub.xyz/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rexx Hub">
@@ -65,6 +65,14 @@ nav.main{display:flex;gap:2px;margin-right:auto}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
 .skeleton{display:grid;gap:14px;padding-top:10px}.skeleton i{height:44px;border-radius:6px;background:linear-gradient(90deg,#111,#222,#111);background-size:200% 100%;animation:sh 1.2s infinite}
 @keyframes sh{to{background-position:-200% 0}}
+.upl small{font-weight:400;color:var(--mute)}.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fld .slot{position:relative;aspect-ratio:1;margin:0;border:1px dashed #484848;border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;color:var(--mute);font-weight:500;transition:border-color .15s}
+.fld .slot:hover{border-color:var(--org)}.fld .slot:focus-within{outline:1px solid var(--org)}
+.slot input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slot .rm{position:absolute;top:4px;right:4px;z-index:2;width:28px;height:28px;border:0;border-radius:50%;background:#000c;color:#fff;cursor:pointer}
+.slot .ph{text-align:center;font-size:1.5rem;line-height:1.1}.slot .ph small{display:block;font-size:.7rem;font-weight:500}
+.upl .hint{margin:8px 0 0;font-size:.75rem;color:var(--mute)}
 .status{min-height:22px;margin:10px 0 0;font-size:.82rem;color:var(--org);font-weight:500}
 section{padding:clamp(56px,8vw,96px) 0}
 .sh{max-width:720px;margin-bottom:32px}.sh h2{font-size:clamp(2.6rem,5.2vw,4.9rem);margin-bottom:10px}.sh p{color:var(--mute);margin:0}
@@ -164,6 +172,7 @@ nav.main.open{display:flex}.ib{display:grid}.ghost{display:none}.bar{gap:10px}.b
       <a href="#preview"><b>Screenshots</b><span>See login, exam and results screens</span></a>
       <a href="https://rexvaonline.rexxhub.xyz" target="_blank" rel="noopener"><b>Teacher dashboard</b><span>Results online for teachers</span></a></div></div>
     <div class="dd"><button aria-expanded="false">Solutions</button><div class="panel">
+      <a href="#services"><b>IT support and maintenance</b><span>Support, upgrades and virtual assistance</span></a>
       <a href="#calculator"><b>Plan your lab</b><span>How many sessions will you need?</span></a>
       <a href="#why"><b>Exam day, offline</b><span>No internet needed during exams</span></a>
       <a href="#about"><b>Custom web apps</b><span>Registration and admin portals</span></a>
@@ -205,7 +214,10 @@ nav.main.open{display:flex}.ib{display:grid}.ghost{display:none}.bar{gap:10px}.b
       <div class="row2"><div class="fld"><label for="name">Your name</label><input class="in" id="name" autocomplete="name" required></div>
       <div class="fld"><label for="school">School or organisation</label><input class="in" id="school" autocomplete="organization" required></div></div>
       <div class="fld"><label for="contact">Phone or email</label><input class="in" id="contact" autocomplete="email" required></div>
-      <div class="fld"><label for="topic">I’m interested in</label><select class="in" id="topic"><option>REXVA trial licence</option><option>Planning a school setup</option><option>A custom web application</option></select></div>
+      <div class="fld"><label for="topic">I’m interested in</label><select class="in" id="topic"><option>REXVA trial licence</option><option>Planning a school setup</option><option>A custom web application</option><option>IT support</option><option>Software and system upgrade or maintenance</option><option>Virtual assistance</option></select></div>
+      <div class="fld upl" id="upl" hidden><label id="upll">Photos of your system or the problem <small>(optional, up to 3)</small></label>
+        <div class="slots" role="group" aria-labelledby="upll"><label class="slot"><input type="file" accept="image/*" aria-label="Photo 1"><span class="ph">+<small>Photo 1</small></span><img alt="Photo 1 preview" hidden><button type="button" class="rm" aria-label="Remove photo 1" hidden>✕</button></label><label class="slot"><input type="file" accept="image/*" aria-label="Photo 2"><span class="ph">+<small>Photo 2</small></span><img alt="Photo 2 preview" hidden><button type="button" class="rm" aria-label="Remove photo 2" hidden>✕</button></label><label class="slot"><input type="file" accept="image/*" aria-label="Photo 3"><span class="ph">+<small>Photo 3</small></span><img alt="Photo 3 preview" hidden><button type="button" class="rm" aria-label="Remove photo 3" hidden>✕</button></label></div>
+        <p class="hint">Images only, up to 5 MB each. Photos stay on your device until you send them.</p></div>
       <div class="fld"><label for="machine">Machine ID <small style="font-weight:400;color:var(--mute)">(from the activation page)</small></label><input class="in" id="machine" placeholder="XXXX-XXXX-XXXX-XXXX" autocomplete="off"></div>
       <button class="btn p" type="submit" style="width:100%">Send request on WhatsApp</button>
       <p class="status" id="status" role="status" aria-live="polite">The licence works on that one computer only.</p>
@@ -226,6 +238,15 @@ nav.main.open{display:flex}.ib{display:grid}.ghost{display:none}.bar{gap:10px}.b
     <div class="rc"><small>Voice</small><strong>Call</strong><small>+234 810 341 3362</small><a class="btn sm" href="tel:+2348103413362">Call now</a></div>
     <div class="rc"><small>Details and documents</small><strong>Email</strong><small>solomonchukwuemeka70@gmail.com</small><a class="btn sm" href="mailto:solomonchukwuemeka70@gmail.com">Write now</a></div>
     <div class="rc"><small>Social</small><strong>Facebook</strong><small>Message Solomon</small><a class="btn sm" href="https://www.facebook.com/share/1K1fvXX1mK/" target="_blank" rel="noopener">Connect</a></div>
+  </div>
+</div></section>
+
+<section id="services" style="padding-top:0"><div class="wrap">
+  <div class="sh"><h2>More than exams. Rexx Hub keeps your technology running.</h2><p>Hands-on help for schools, offices and small businesses, in person or remotely.</p></div>
+  <div class="tiles feat">
+    <div><h3>IT support</h3><p>Fast help with computers, networks, printers and everyday technical faults, so your team keeps working.</p><a class="more" href="#top" data-topic="IT support">Ask about IT support →</a></div>
+    <div><h3>Software and system upgrade and maintenance</h3><p>Updates, upgrades, clean-ups, backups and regular checks that keep your systems fast, secure and reliable.</p><a class="more" href="#top" data-topic="Software and system upgrade or maintenance">Ask about maintenance →</a></div>
+    <div><h3>Virtual assistance</h3><p>Remote administrative support: data entry, documents, scheduling and email handling, so you can focus on your work.</p><a class="more" href="#top" data-topic="Virtual assistance">Ask about virtual assistance →</a></div>
   </div>
 </div></section>
 
@@ -289,9 +310,9 @@ nav.main.open{display:flex}.ib{display:grid}.ghost{display:none}.bar{gap:10px}.b
   <div class="who" id="about">
     <img src="profile.jpg" alt="Ngene Solomon Chukwuemeka" loading="lazy">
     <div><h2 style="font-size:clamp(2.6rem,5vw,4.4rem)">Ngene Solomon Chukwuemeka builds software for <span class="o">real work.</span></h2>
-      <p>I build offline and online CBT software, teacher dashboards and practical web applications. Recent work includes The Wins Scoresheet, a continuous assessment result portal for senior secondary schools, and a pageant registration and management portal on Google Apps Script and Google Sheets.</p>
+      <p>I build offline and online CBT software, teacher dashboards and practical web applications. I also provide IT support, software and system upgrade and maintenance, and virtual assistance. Recent work includes The Wins Scoresheet, a continuous assessment result portal for senior secondary schools, and a pageant registration and management portal on Google Apps Script and Google Sheets.</p>
       <p><a class="btn sm p" href="https://thewinsscoresheet.rexxhub.xyz/" target="_blank" rel="noopener">View The Wins Scoresheet ↗</a> <a class="btn sm" href="https://da.gd/regpage" target="_blank" rel="noopener">View registration ↗</a> <a class="btn sm" href="https://da.gd/adminpage" target="_blank" rel="noopener">View admin portal ↗</a></p>
-      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Google Apps Script</span><span>Google Sheets</span><span>Desktop software</span><span>Web applications</span></div></div>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Google Apps Script</span><span>Google Sheets</span><span>Desktop software</span><span>Web applications</span><span>IT support</span><span>System maintenance</span><span>Virtual assistance</span></div></div>
   </div>
 </div></section>
 
@@ -318,7 +339,7 @@ nav.main.open{display:flex}.ib{display:grid}.ghost{display:none}.bar{gap:10px}.b
   <div class="fg">
     <div><h4>Product</h4><a href="#why">REXVA CBT</a><a href="#preview">Screenshots</a><a href="#calculator">Plan your lab</a><a href="https://rexvaonline.rexxhub.xyz" target="_blank" rel="noopener">Teacher dashboard</a></div>
     <div><h4>Get started</h4><a href="downloads/REXVA-V1.3.0-offline.zip" download>Download trial</a><a href="#top">Request licence</a><a href="#cta">Pricing</a></div>
-    <div><h4>Company</h4><a href="#about">About</a><a href="#proof">School stories</a><a href="#about">Selected work</a><a href="https://thewinsscoresheet.rexxhub.xyz/" target="_blank" rel="noopener">The Wins Scoresheet</a></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#about">About</a><a href="#proof">School stories</a><a href="#about">Selected work</a><a href="https://thewinsscoresheet.rexxhub.xyz/" target="_blank" rel="noopener">The Wins Scoresheet</a></div>
     <div><h4>Resources</h4><a href="downloads/README.txt" target="_blank" rel="noopener">Installation guide</a><a href="#calculator">Lab calculator</a><a href="#videos">Video demos</a><a href="#feedback">Give feedback</a></div>
     <div><h4>Contact</h4><a href="https://wa.me/2348103413362">WhatsApp</a><a href="mailto:solomonchukwuemeka70@gmail.com">Email</a><a href="https://www.facebook.com/share/1K1fvXX1mK/" target="_blank" rel="noopener">Facebook</a></div>
   </div>
@@ -340,10 +361,31 @@ $("menu").onclick=e=>{e.stopPropagation();const o=$("nav").classList.toggle("ope
 $("nav").addEventListener("click",e=>{if(e.target.closest(".panel a,.dd>a"))$("nav").classList.remove("open")});
 /* form: skeleton, then ready */
 setTimeout(()=>{$("loading").hidden=true;$("form").hidden=false},500);
+/* up to 3 photos for system and software upgrade enquiries */
+const UPG="Software and system upgrade or maintenance",photos=[null,null,null];
+const syncUpl=()=>{$("upl").hidden=$("topic").value!==UPG};
+$("topic").addEventListener("change",syncUpl);
+[...$("upl").querySelectorAll(".slot")].forEach((sl,i)=>{
+  const inp=sl.querySelector("input"),im=sl.querySelector("img"),ph=sl.querySelector(".ph"),rm=sl.querySelector(".rm");
+  const clear=()=>{if(im.src)URL.revokeObjectURL(im.src);im.removeAttribute("src");im.hidden=rm.hidden=true;ph.hidden=false;photos[i]=null;inp.value=""};
+  inp.onchange=()=>{const f=inp.files[0];if(!f)return;
+    if(!/^image\//.test(f.type)){$("status").textContent="Please choose an image file.";inp.value="";return}
+    if(f.size>5*1024*1024){$("status").textContent="Each photo must be 5 MB or smaller.";inp.value="";return}
+    if(im.src)URL.revokeObjectURL(im.src);
+    photos[i]=f;im.src=URL.createObjectURL(f);im.hidden=rm.hidden=false;ph.hidden=true;$("status").textContent=""};
+  rm.onclick=e=>{e.preventDefault();e.stopPropagation();clear()}});
 $("form").onsubmit=e=>{e.preventDefault();const v=i=>$(i).value.trim();
   const m="Rexx Hub enquiry: "+v("topic")+"\nName: "+v("name")+"\nSchool: "+v("school")+"\nContact: "+v("contact")+(v("machine")?"\nMachine ID: "+v("machine"):"");
+  const files=$("upl").hidden?[]:photos.filter(Boolean),st=$("status");
+  if(files.length){
+    const msg=m+"\nPhotos: "+files.length;
+    if(navigator.canShare&&navigator.canShare({files})){
+      navigator.share({files,text:msg}).then(()=>{st.textContent="Shared. Make sure it went to Rexx Hub on WhatsApp, +234 810 341 3362."}).catch(err=>{st.textContent=err&&err.name==="AbortError"?"Sharing was cancelled. Press Send again when you are ready.":"Your device could not share the photos. Message Rexx Hub on WhatsApp and attach them there."});
+      return}
+    window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank","noopener");
+    st.textContent="WhatsApp is open. Tap the attach (+) button there and add your "+files.length+" photo"+(files.length>1?"s":"")+", then send.";return}
   window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank","noopener");
-  $("status").textContent="Your request is ready in WhatsApp. Send it to continue."};
+  st.textContent="Your request is ready in WhatsApp. Send it to continue."};
 /* screenshots: tabs + Low / High motion */
 const capEl=document.createElement("span");capEl.className="cap";$("screen").append(capEl);
 const imgs=[...document.querySelectorAll("#screen img")],tabs=[...document.querySelectorAll("#tabs button")];let k=0,tm=null,hi=!matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -378,6 +420,7 @@ rb.forEach((b,i)=>b.onclick=()=>{rate=i+1;rb.forEach((x,j)=>x.setAttribute("aria
 function fbText(){return "Rexx Hub feedback\nFrom: "+($("fbn").value.trim()||"Anonymous")+" ("+$("fbr").value+")\nRating: "+rate+"/5\n\n"+$("fbm").value.trim()}
 $("fbform").onsubmit=e=>{e.preventDefault();window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(fbText()),"_blank","noopener");$("fbstatus").textContent="Your feedback is ready in WhatsApp. Send it to finish. Thank you!"};
 $("fbmail").onclick=()=>{if(!$("fbm").value.trim()){$("fbstatus").textContent="Please write your feedback first.";$("fbm").focus();return}location.href="mailto:solomonchukwuemeka70@gmail.com?subject="+encodeURIComponent("Rexx Hub feedback ("+rate+"/5)")+"&body="+encodeURIComponent(fbText());$("fbstatus").textContent="Your email app should open with the feedback ready to send."};
+document.querySelectorAll("[data-topic]").forEach(a=>a.addEventListener("click",()=>{$("topic").value=a.dataset.topic;syncUpl()}));
 </script>
 </body>
 </html>
